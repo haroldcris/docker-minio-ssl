@@ -62,7 +62,7 @@ server {
         proxy_set_header Connection "";
         chunked_transfer_encoding off;
 
-        proxy_pass http://minio:9000;
+        proxy_pass http://minio;
     }
 }
 
@@ -117,6 +117,6 @@ server {
         proxy_set_header Connection "upgrade";
         chunked_transfer_encoding off;
 
-        proxy_pass http://console:9000;
+        proxy_pass http://console;
     }
 }
