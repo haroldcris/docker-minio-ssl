@@ -1,0 +1,12 @@
+# Use an official Certbot base image
+FROM certbot/certbot
+
+# Install the Certbot DNS GoDaddy plugin
+RUN pip install certbot-dns-godaddy
+
+# Install gettext-base package which includes envsubst
+RUN apt-get install -y gettext-base
+
+
+
+CMD ["certbot"]
